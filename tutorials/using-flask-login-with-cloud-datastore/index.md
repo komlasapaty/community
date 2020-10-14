@@ -106,6 +106,8 @@ class User(DatastoreEntity, UserMixin):
     status = EntityValue(1)
     date_created = EntityValue(datetime.datetime.utcnow())
 
+    __kind__ = "User"
+
     # other fields or methods go here...
     #def authenticated(self, password):
     #    ...
